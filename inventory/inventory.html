@@ -1,0 +1,90 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <p>Item Name</p>
+    <p>
+        <input type="text" id="byItemName" value="Item name" />
+    </p>
+    <p>Item Category</p>
+    <p>
+        <input type="text" id="byCategory" value="Category" />
+    </p>
+    <p>Item Quantity</p>
+    <p>
+        <input type="number" id="byQuantity" value="0" />
+    </p>
+    <p>Rating</p>
+    <p>
+        <input type="number" id="byRate" value="0.0" />
+    </p>
+    <p>Todelete</p>
+    <p>
+        <input type="text" id="byDelet" value="xxxx" />
+    </p>
+
+    <button onclick="addToList();">Add To List</button><br>
+
+    <caption type="button">
+
+    </caption>
+
+    <table border="">
+        <tr>
+            <th>Item Name </th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Rating</th>
+            <th>todelet</th>
+        </tr>
+
+
+        </select>
+        <br>
+        <p>Choose your Item Category</p>
+        <select name="shipping" id="shipping">
+            <option value="Electrical"> Electrical</option>
+            <option value="sanitory">sanitory</option>
+            <option value="spare part">spare part </option>
+            <option value="construction">construction</option>
+            <option value="rents"> rent equipment</option>
+            <br>
+            <br>
+
+    </table>
+    <script>
+        function addToList() {
+            let itemName = document.getElementById("byItemName").value;
+            let itemCategory = document.getElementById("byCategory").value;
+            let itemQuantity = document.getElementById("byQuantity").value;
+            let itemRate = document.getElementById("byRate").value;
+            let todelet = document.getElementById("byDelet").value;
+
+            let table = document.getElementsByTagName('table')[0];
+
+            let newRow = table.insertRow(table.rows.length / 1 + 0);
+
+            let row1 = newRow.insertCell(0);
+            let row2 = newRow.insertCell(1);
+            let row3 = newRow.insertCell(2);
+            let row4 = newRow.insertCell(3);
+            let row5 = newRow.insertCell(4);
+            row5 = null;
+            newRow.insertCell(4).value = null;
+
+
+            row1.innerHTML = itemName;
+            row2.innerHTML = itemCategory;
+            row3.innerHTML = itemQuantity;
+            row4.innerHTML = itemRate;
+            row5.innerHTML = todelet;
+
+
+        }
+
+    </script>
+</body>
+
+</html>
