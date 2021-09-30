@@ -1,0 +1,34 @@
+<html>
+
+<body>
+    <p>Input</p>
+    <P>
+        <input type="text" id="input" value="text">
+    </P>
+    <p>Output</p>
+    <p>
+
+
+        <textarea class="myClass" id="out" rows="4" cols="20"></textarea>
+
+        <br><br>
+
+        <input class="myClass" id="id" type="button" onclick="submit()" value="addValue" />
+
+    </P>
+
+    <script>
+        function submit() {
+            let iner = document.getElementById("input");
+            let output = document.getElementById("out");
+            output.value += iner.value;
+            alert(Output);
+
+            output.innerHTML = Output;
+            document.body.append(Output);
+        }
+
+    </script>
+</body>
+
+</html>
